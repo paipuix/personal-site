@@ -1,0 +1,42 @@
+html {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    color: black;
+}
+
+.genreList ul {
+    align-content: center;
+    list-style: none;
+}
+
+.genreList li {
+    display: inline;
+}
+
+.genre, #langIcon {
+    border-color: black;
+    border-radius: 0px;
+}
+
+.genre {
+    background-image: url('images/eighthnote.webp');
+}
+
+.genre:hover {
+    transform: scale(110%);
+    cursor: pointer;
+}
+
+.langIcon {
+    cursor: pointer;
+}
