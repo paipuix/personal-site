@@ -212,9 +212,10 @@ body {
 /* this makes the sidebar text slightly smaller */
 }
 
-/* ul {
+ul {
+    margin-left: -15px;
     list-style-image: var(--list-style-image);
-} */
+}
 
 /* this is the color of the main content area,
    between the sidebars! */
