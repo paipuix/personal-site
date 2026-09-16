@@ -278,8 +278,7 @@ p {
     width: auto;
     background-image: url("assets/wallpaper/purplepaddingbg.jpg");
     padding: 10px;
-    border: 20px solid #c289f0;
-    border-image: url("assets/borders/candyborder.avif") 100 round ;
+    border: 2px solid #c289f0;
     display: block;
 }
 
