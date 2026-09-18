@@ -90,7 +90,7 @@ body {
 
 /* CSS for extras */
 .topBar {
-    background-image: url("assets/wallpapers/purplepaddingbg.jpg");
+    background-image: url("assets/wallpaper/blackgraystripe.webp");
     width: 100%;
     height: 30px;
     padding: 10px;
@@ -163,7 +163,7 @@ body {
 
 /* Blinkie Marquee */
 .blinkiemarquee {
-    background-image: url("assets/wallpaper/MT.png");
+    background-image: url("assets/wallpaper/pastelpinkblue.jpg");
     display: flex ;
     overflow: hidden ;
     white-space: nowrap ;
