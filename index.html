@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="stylesheet.css">
-    <link rel="icon" type="image/gif" href="assets/pixels/purpleblackbow.avif">
+    <link rel="icon" type="image/gif" href="assets/pixels/kuromicomp.webp">
     <title>Tech Tomes</title>
 </head>
 <body>
     <!-- <img src="assets/stickers/paswg.webp" style="position: fixed; left: 89%; bottom: 0%; z-index: 100; scale: 1;">
 <img src="assets/stickers/madokahomura.webp" style="position: fixed; left: -13%; bottom: -28%; z-index: 100; scale: .4; transform: scaleX(-1);"> -->
-    <div id="container">
-        <div id="bigBorder">
-            <footer id="topBar" style="text-align: center;">If moving elements, low contrast, and bright colors affect you, please click off!</footer>
-            <div id="headerArea">
-                <div id="header" style="height: 200px;"></div>
+    <div class="container">
+        <div class="bigBorder">
+            <footer class="topBar">If moving elements, low contrast, and bright colors affect you, please click off!</footer>
+            <div class="headerArea">
+                <div class="header"></div>
 
 <!-- DO NOT TOUCH ANYTHING WITHIN THIS BLOCK UNLESS YOU ARE REMOVING OR CHANGING THE IMAGES.
      I SWEAR IF YOU TOUCH ANYTHING ELSE, IT WILL CRUMBLE INTO DUST! -->
@@ -74,8 +74,8 @@
                 <img src="assets/blinkies/saL.avif">
             </div>
         </div>
-        <div id="flex">
-            <aside id="leftSidebar" style="margin-right: 0px;">
+        <div class="flex">
+            <aside class="leftSidebar" style="margin-right: 0px;">
                 <div class="box" style="align-self: center;">
                     <ul>
                         <li><p><a href="https://paipuix.github.io/personal-site/">Home</a></p></li>
@@ -83,11 +83,22 @@
                         <li><p><a href="https://paipuix.github.io/page3/">???</a></p></li>
                         <!-- <li><a href="paipuix.github.io/reading-content/"><p>Reading</p></a></li> -->
                     </ul>
-                    
+                </div>
+                <div class="box" style="align-self: center;">
+                    <div class="stampmarquee">
+                        <div class="stamps">
+                            <img src="assets/stamps/">
+                            <img src="assets/stamps/">
+                            <img src="assets/stamps/">
+                            <img src="assets/stamps/">
+                            <img src="assets/stamps/">
+                            <img src="assets/stamps/">
+                        </div>
+                    </div>
                 </div>
                 <img src="assets/dividers/blackcross.avif" style="display: block; margin: auto; align-content: center;">
                 <div class="box">
-                    <p><strong>To-Do List</strong></p>
+                    <p class="toDoList"><strong>To-Do List</strong></p>
                     <ul>
                         <li><s><p>Link home page</p></s></li>
                         <li><p>Edit decor on index</p></li>
@@ -96,18 +107,51 @@
                         <li><p>Create projects page</p></li>
                         <li><p>Download and upload MM projects to project page</p></li>
                     </ul>
-                    </div>
+                </div>
+            <div class="box">
+                <div class="blinkies2">
+                    <img src="assets/stamps/">
+                    <img src="assets/stamps/">
+                    <img src="assets/stamps/">
+                    <img src="assets/stamps/">
+                    <img src="assets/stamps/">
+                    <img src="assets/stamps/">
+                </div>
+            </div>
                 <!-- <a href="https://chu-chuns.neocities.org/" target="_blank">Inspired by<strong>Chun's Neocities</strong></a> -->
             </aside>
-        <main>
+        <main class="main">
             <h1>Welcome To the Tech Tomes!</h1>
             <p style="text-align: center;"><strong>WEBSITE IS UNDER CONSTRUCTION!<br>UPDATES ARE PERIODICALLY ADDED!</strong></p>
-
-            <!-- Site Log -->
-            <div id="sitelog" style="height: 350px; width: 100%; border: 1px solid #43256E; padding: 10px; overflow-y: auto;">
+            <!-- <div id="blackKitty">
+                <img src="assets/stickers/blackkitty.webp">
+            </div> -->
+            <h2>About me</h2>
+                    <p>Hello! My name is Paipuix (pronounced as ˈpaɪpwiː), and I'm a 17-year old beginner to HTML and CSS. Welcome to my personal site, and I hope you stay to check it out!</p>
+        </main>
+            <aside class="rightSidebar" style="margin-left: 0px;">
+                <img src="assets/stickers/paswg.webp" style="display: block; margin: auto; align-content: center;">
+                <div class="box"><p>Not sure what I'm going to put in here... Maybe pixels for more decoration?</p>
+                    <img src="assets/pixels/unicorn.avif">
+                    <img src="assets/pixels/pinksyringe.avif">
+                    <img src="assets/pixels/purpleblackbow.avif">
+                    <img src="assets/pixels/pinkcastle.avif">
+                    <img src="assets/pixels/pinkbow.avif">
+                    <img src="assets/pixels/patelcarousel.avif">
+                    <img src="assets/pixels/pasteleyeball.avif">
+                    <img src="assets/pixels/kuromicomp.webp">
+                    <img src="assets/pixels/gloomybear.avif">
+                    <img src="assets/pixels/blackparasol.avif">
+                    <img src="assets/pixels/gothicdress.avif">
+                    <img src="assets/pixels/chocolatebar.avif">
+                </div>
+                <img src="assets/dividers/blackcross.avif">
+                <!-- Site Log -->
+            <div class="sitelog" style="height: 350px; width: 100%; border: 1px solid #43256E; padding: 10px; overflow-y: auto;">
                 <h1 style="text-align: center; color: #43256E">Site Log</h1>
                 <h6 id="logtemplate"><strong>MM/DD/YYYY (This is the date layout I'm using)</strong></h6>
-                                <p class="log"><strong>09/106/2026:</strong> Working on decorating the main page and creating more pages. I have to work on making my projects page too and linking that. I made the site log longer so you don't have to scroll as much. I also plan to make pretty long log entries, because I sometimes change my mind about ideas. It also just helps me keep track fo my ideas and progress.</p>
+                <p class="log"><strong>09/18/2026:</strong> Moved the site log to the bottom right corner for clarity.</p>
+                <p class="log"><strong>09/16/2026:</strong> Working on decorating the main page and creating more pages. I have to work on making my projects page too and linking that. I made the site log longer so you don't have to scroll as much. I also plan to make pretty long log entries, because I sometimes change my mind about ideas. It also just helps me keep track fo my ideas and progress.</p>
                 <p class="log"><strong>09/10/2026:</strong> My website still looks terrible even after trying to reupload files... I don't understand what I'm doing wrong lol. Also forgot to link my Music Genres site. Woops. UPDATE: I FINALLY FIGURED IT OUT! I had to hard refresh.</p>
                 <p class="log"><strong>09/08/2026:</strong> Going to link my History of Genres site to this one.</p>
                 <p class="log"><strong>09/03/2026:</strong> I still don't know why the images aren't loading still, but I updated the cursor to be a cute bat wing. Updated my About Me section. Added missing texture backgrounds.</p>
@@ -115,19 +159,10 @@
                 <p class="log"><strong>08/31/2026:</strong> Locking in on this 'cause I want it to be published on Github soon.</p>
             </div>
                 <!-- Site log -->
-        </main>
-            <aside id="rightSidebar" style="margin-left: 0px;">
-                <h2>About me</h2>
-                <div class="box">
-                    <p>Hello! My name is Paipuix (pronounced<br>/ˈpaɪpwiː/), and I'm a 17-year old beginner to HTML and CSS. Welcome to my personal site, and I hope you stay to check it out!</p>
-                    <img src="assets/stickers/paswg.webp" style="display: block; margin: auto; align-content: center;">
-                </div>
-        <!-- Resource: https://www.w3schools.com/csS/css3_image_center.asp -->
                 <img src="assets/dividers/blackcross.avif">
                 <div class="box">
+                    <a id="BCB" href="https://blinkies.cafe" target="_blank"><img src="https://blinkies.cafe/b/display/blinkiesCafe-badge.gif" alt="blinkies.cafe | make your own blinkies!"></a>
                 </div>
-                
-            <a id="BCB" href="https://blinkies.cafe" target="_blank"><img src="https://blinkies.cafe/b/display/blinkiesCafe-badge.gif" alt="blinkies.cafe | make your own blinkies!"></a>
             </div>
             <!-- <footer style="font-size: 10px;">This is a footer. Small text for small information!</footer>  -->
             </aside>
