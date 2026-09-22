@@ -1,324 +1,6 @@
-/* Fonts */
-@font-face {
-  font-family: 'Flipnote Hatena';
-  src: url('assets/fonts/flipnote-hatena.otf') format('woff2'),
-       url('assets/fonts/flipnote-hatena.otf') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-    
-:root {
-    --header-image: url("assets/wallpaper/pink1.png");
-    --body-bg-image: url("assets/wallpaper/pink1.tilever.png");
-/* Colors */
-    --content: #43256E;
-    --list-style-image: url("assets/pixels/batwingL.gif");
-}
-
-/* Custom scrollbar: https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp. */
-/* Width */
-::-webkit-scrollbar {
-    width: 14px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px #c289f0; 
-    border-radius: 1.5px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #5e4e8c;
-    border: 1.5px solid #43256E;
-    border-radius: 0px;
-    box-shadow: inset 0 -1px 1px #fff, inset 0 1px 1px #fff;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #43256E;
-    border: 1.5px solid #5e4e8c;
-    border-radius: 1px;
-    box-shadow: inset 0 -1px 1px #fff, inset 0 1px 1px #fff;
-}
-
-/*Highlight color in the general page. */
-::selection {
-  background-color: #151C1A;
-  color: #d9b9f6;
-}
-
-/* Custom Cursor when hovering (:hover) overing a link (a). */
-a:hover {
-    cursor: url("assets/cursors/batwingR.cur") 0 16, auto;
-}
-
-a {
-    color: #bbabd8;
-}
-
-/* Highlight color when hovering (:hover) overing a link (a). */
-a::selection {
-    color: #c289f0;
-}
-
-a:hover {
-    color: #43256E;
-}
-
-a:visited {
-    color: #bbabd8;
-}
-
-body {
-    font-family: 'Flipnote Hatena', monospace, Arial, Helvetica, sans-serif;
-    margin: 0;
-    /* background-color: #c289f0; */
-/* You can delete the line below if you'd prefer to not use an image */
-    background-size: 65px;
-    color: #fceaff;
-    background-image: var(--body-bg-image);
-    background-repeat: repeat;
-    /* Custom Cursor in the general page. */
-    cursor: url("assets/cursors/batwingR.cur") 0 16, auto;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-/* CSS for extras */
-.topBar {
-    background-image: url("assets/wallpaper/blackgraystripe.webp");
-    width: 100%;
-    height: 30px;
-    padding: 10px;
-    font-size: smaller;
-}
-
-/* The "container" is what wraps your entire website. */
-/* If you want something (like the header) to be Wider than
-   the other elements, you will need to move that div outside
-   of the container. */
-.container {
-    max-width: 1000px;
-/* This is the width of your layout! */
-/* If you change the above value, scroll to the bottom
-   and change the media query according to the comment! */
-    margin: 0 auto;
-/* This centers the entire page. */
-    color: #e07ed7;
-    font-weight: bold;
-}
-
-/* The area below is for all links on your page
-   EXCEPT for the navigation. */
-
-.bigBorder {
-    border: 35px solid rgba(255, 255, 255, 0);
-    border-image: url("assets/borders/blacklace.png") 85 round;
-}
-
-.header {
-    width: 100%;
-    background-color: #5e4e8c;
-/* Header color here! */
-    height: 150px;
-/* This is only for a background image! */
-/* If you want to put assets IN the header, 
-   you can add them directly to the <div id="header"></div> element! */
-    background-image: var(--header-image);
-    background-size: 100%;
-}
-
 /* Resource: https://bennadel.github.io/JavaScript-Demos/demos/marquee-animations/. */
-/* Stamp Marquee */
 
-.stampmarquee {
-    background-image: url("assets/wallpaper/MT.png");
-    display: flex ;
-    overflow: hidden ;
-    white-space: nowrap ;
-    width: 100%;
-    height: 65px;
-}
-
-.stamps {
-    animation-duration: 15s;
-    animation-iteration-count: infinite;
-    animation-name: stampsHori;
-    animation-timing-function: linear;
-    padding: 3px 3px 3px 3px;
-}
-
-@keyframes stampsHori {
-	from {
-		transform: translateX( 0% );
-	}
-	to {
-		transform: translateX( -100% );
-	}
-}
-
-/* Blinkie Marquee */
-.blinkiemarquee {
-    background-image: url("assets/wallpaper/pastelpinkblue.jpg");
-    display: flex ;
-    overflow: hidden ;
-    white-space: nowrap ;
-    width: 100%;
-    height: 65px;
-}
-
-.blinkies {
-    animation-duration: 15s;
-    animation-iteration-count: infinite;
-    animation-name: blinkiesHori;
-    animation-timing-function: linear;
-    padding: 3px 3px 3px 3px;
-}
-
-@keyframes blinkiesHori {
-	from {
-		transform: translateX( 0% );
-	}
-	to {
-		transform: translateX( -100% );
-	}
-}
-
-.blinkies2 {
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-name: blinkiesVert;
-    animation-timing-function: linear;
-    padding: 3px 3px 3px 3px;
-}
-
-img.blinkies2 {
-    z-index: 2;
-}
-
-@keyframes blinkiesVert {
-	from {
-		transform: translateY( 0% );
-	}
-	to {
-		transform: translateY( 100% );
-	}
-}
-/* BOTH of the marquee items are going to be translating left at the same time.
-   And, once each of them has translated to -100%, they will both snap back into
-   place, making it seem as if they are continuously scrolling. */
-
-/* Tone down the animation to avoid vestibular motion triggers. */
-@media (prefers-reduced-motion: reduce) {
-  .animation {
-    animation: dissolve 4s linear infinite both;
-    text-decoration: overline;
-  }
-}
-
-.flex {
-    display: flex;
-}
-
-.leftSidebar {
-    background-image: url("assets/wallpaper/purplepaddingbg.jpg");
-    width: 200px;
-    padding: 20px;
-    font-size: smaller;
-/* this makes the sidebar text slightly smaller */
-}
-
-ul {
-    margin-left: -15px;
-    list-style-image: var(--list-style-image);
-}
-
-/* this is the color of the main content area,
-   between the sidebars! */
-.main {
-    background-image: url("assets/wallpaper/purplepaddingbg.jpg");
-    flex: 1;
-    padding: 20px;
-    order: 2;
-}
-
-.rightSidebar {
-    background-image: url("assets/wallpaper/purplepaddingbg.jpg");
-    width: 200px;
-    padding: 20px;
-    font-size: smaller;
-    
-/* this makes the sidebar text slightly smaller */
-}
-
-/* what's this "order" stuff about??
-   allow me to explain!
-   if you're using both sidebars, the "order" value
-   tells the CSS the order in which to display them.
-   left sidebar is 1, content is 2, and right sidebar is 3! */
-   
-.leftSidebar {
-    order: 1;
-}
-
-.toDoList {
-    z-index: 1;
-}
-
-.rightSidebar {
-    order: 3;
-}
-
-footer {
-    background-image: url("assets/wallpaper/purplepaddingbg.jpg");
-/* background color for footer */
-    width: 100%;
-    height: 40px;
-    padding: 10px;
-    text-align: center;
-/* this centers the footer text */
-}
-
-#blackKitty {
-    display: hidden;
-    height: auto;
-    width: 150px;
-    border: 100px solid rgba(255, 255, 255);
-    border-image: url('assets/borders/rainbowpulse.gif') 100 round;
-}
-
-h1, h2, h3, h4, h5 {
-    font-size: 35px;
-    text-align: center;
-}
-
-h6 {
-    font-size: 15px;
-}
-
-strong {
-/* this styles bold text */
-    color: #8357a8;
-}
-
-p {
-    font-size: 23px;
-}
-
-/* this is just a cool box, it's the darker colored one */
-.box {
-    height: auto;
-    width: auto;
-    background-image: url("assets/wallpaper/purplepaddingbg.jpg");
-    padding: 10px;
-    border: 2px solid #c289f0;
-    display: block;
-}
-
+/* Miscellaneous */
 
 /* BELOW THIS POINT IS MEDIA QUERY */
 /* so you wanna change the width of your page? 
@@ -361,16 +43,328 @@ aside {
     }
 }
 
-.sitelog {
-    font-size: 13px;
-    background-image: url("assets/wallpaper/purplepaddingbg.jpg");
+/* Fonts */
+@font-face {
+  font-family: 'Flipnote Hatena';
+  src: url('assets/fonts/flipnote-hatena.otf') format('woff2'),
+       url('assets/fonts/flipnote-hatena.otf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+    
+:root {
+    --body-bg-image: url("assets/wallpaper/pink1.tilever.png");
+    /* --header-image: url("assets/wallpaper/pink1.png"); */
+/* Colors */
+    --content: #43256E;
+    --list-style-image: url("assets/pixels/batwingL.gif");
 }
 
-iframe {
-    width: 500px;
-    height: 500px;
+/* Custom scrollbar: https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp. */
+/* Width */
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #c289f0; 
+    border-radius: 1.5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #5e4e8c;
+    border: 1.5px solid #43256E;
+    border-radius: 0px;
+    box-shadow: inset 0 -1px 1px #fff, inset 0 1px 1px #fff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #43256E;
+    border: 1.5px solid #5e4e8c;
+    border-radius: 1px;
+    box-shadow: inset 0 -1px 1px #fff, inset 0 1px 1px #fff;
+}
+
+/*Highlight color in the general page. */
+::selection {
+  background-color: #151C1A;
+  color: #d9b9f6;
+}
+/* The area below is for all links on your page
+   EXCEPT for the navigation. */
+
+.bigBorder {
+    border: 35px solid rgba(255, 255, 255, 0);
+    border-image: url("assets/borders/blacklace.png") 85 round;
+}
+
+/* The "container" is what wraps your entire website. */
+/* If you want something (like the header) to be Wider than
+   the other elements, you will need to move that div outside
+   of the container. */
+.container {
+    max-width: 1000px;
+/* This is the width of your layout! */
+/* If you change the above value, scroll to the bottom
+   and change the media query according to the comment! */
+    margin: 0 auto;
+/* This centers the entire page. */
+    color: #e07ed7;
+    font-weight: bold;
+}
+
+.flex {
+    display: flex;
+}
+
+body {
+    font-family: 'Flipnote Hatena', monospace, Arial, Helvetica, sans-serif;
+    margin: 0;
+    /* background-color: #c289f0; */
+/* You can delete the line below if you'd prefer to not use an image */
+    background-size: 65px;
+    color: #fceaff;
+    background-image: var(--body-bg-image);
+    background-repeat: repeat;
+    /* Custom Cursor in the general page. */
+    cursor: url("assets/cursors/batwingR.cur") 0 16, auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* CSS for extras */
+.topBar {
+    background-image: url("assets/wallpaper/blackgraystripe.webp");
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+    font-size: smaller;
+}
+
+.header {
+    width: 100%;
+    background-color: #5e4e8c;
+/* Header color here! */
+    height: 150px;
+/* This is only for a background image! */
+/* If you want to put assets IN the header, 
+   you can add them directly to the <div id="header"></div> element! */
+    background-image: url("assets/wallpaper/");
+    background-size: 100%;
+}
+
+/* Overarching container for the marquees */
+.stampmarquee, .blinkiemarquee {
+    background-image: url("assets/wallpaper/");
+}
+
+/* Stamp Marquee */
+.stampmarquee {
+    display: flex ;
+    overflow: hidden ;
+    white-space: nowrap ;
+    width: 100%;
+}
+
+.stamps {
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-name: stampsHori;
+    animation-timing-function: linear;
+    padding: 3px 3px 3px 3px;
+}
+
+@keyframes stampsHori {
+	from {
+		transform: translateX( 0% );
+	}
+	to {
+		transform: translateX( -100% );
+	}
+}
+
+/* Blinkie Marquee */
+.blinkiemarquee {
+    display: flex ;
+    overflow: hidden ;
+    white-space: nowrap ;
+    width: 100%;
+}
+
+.blinkies {
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-name: blinkiesHori;
+    animation-timing-function: linear;
+    padding: 3px 3px 3px 3px;
+}
+
+@keyframes blinkiesHori {
+	from {
+		transform: translateX( 0% );
+	}
+	to {
+		transform: translateX( -100% );
+	}
+}
+
+/* .blinkiemarquee2 {
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-name: blinkiesVert;
+    animation-timing-function: linear;
+    padding: 3px 3px 3px 3px;
+} */
+
+/* @keyframes blinkiesVert {
+	from {
+		transform: translateY( 0% );
+	}
+	to {
+		transform: translateY( -100% );
+	}
+} */
+
+/* BOTH of the marquee items are going to be translating left at the same time.
+   And, once each of them has translated to -100%, they will both snap back into
+   place, making it seem as if they are continuously scrolling. */
+
+   /* Tone down the animation to avoid vestibular motion triggers.
+@media (prefers-reduced-motion: reduce) {
+  .animation {
+    animation: dissolve 4s linear infinite both;
+    text-decoration: overline;
+  }
+} */
+
+a {
+    color: #bbabd8;
+}
+
+/* Highlight color when hovering (:hover) overing a link (a). */
+a::selection {
+    color: #c289f0;
+}
+
+a:hover {
+    cursor: url("assets/cursors/batwingR.cur") 0 16, auto;
+    color: #43256E;
+}
+
+a:visited {
+    color: #bbabd8;
+}
+
+h1, h2  {
+    font-size: 35px;
+    text-align: center;
+}
+
+h6 {
+    font-size: 15px;
+}
+
+p {
+    font-size: 23px;
+}
+
+strong {
+/* this styles bold text */
+    color: #8357a8;
+}
+
+ul {
+    margin-left: -15px;
+    list-style-image: var(--list-style-image);
+}
+
+.box {
+    height: auto;
+    width: auto;
+    background-image: url("assets/wallpaper/purplepaddingbg.jpg");
+    padding: 10px;
+    border: 2px solid #c289f0;
+    display: block;
+}
+
+/* Left sidebar */
+
+/* what's this "order" stuff about??
+   allow me to explain!
+   if you're using both sidebars, the "order" value
+   tells the CSS the order in which to display them.
+   left sidebar is 1, content is 2, and right sidebar is 3! */
+.leftSidebar {
+    background-image: url("assets/wallpaper/purplepaddingbg.jpg");
+    width: 200px;
+    padding: 20px;
+    font-size: smaller;
+/* this makes the sidebar text slightly smaller */
+}
+
+.toDoList {
+    z-index: 1;
+}
+
+/* Main */
+
+/* this is the color of the main content area,
+   between the sidebars! */
+.main {
+    background-image: url("assets/wallpaper/purplepaddingbg.jpg");
+    flex: 1;
+    padding: 20px;
+    order: 2;
+}
+
+#warning, .logtemplate {
+    margin-top: -2%;
+    text-align: center;
+}
+
+/* #blackkitty {
+    display: flex;
+    justify-content: center;
+} */
+
+.sitelog {
+    background-image: url("assets/wallpaper/purplepaddingbg.jpg");
+    height: 200px;
+    width: 100%;
+    border: 1px solid #43256E;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+#atabook {
+    width: 100%;
+    height: 400px;
     overflow: auto;
     margin-left: auto;
     margin-right: auto;
     background-color: #777;
+}
+
+footer {
+    background-image: url("assets/wallpaper/purplepaddingbg.jpg");
+/* background color for footer */
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+/* this centers the footer text */
+}
+
+/* Right sidebar */
+
+.rightSidebar {
+    order: 3;
+    background-image: url("assets/wallpaper/purplepaddingbg.jpg");
+    width: 200px;
+    padding: 20px;
 }
