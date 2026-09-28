@@ -2,6 +2,13 @@
 
 /* Miscellaneous */
 
+/* Midnight Black (#0B0B0B)
+Ghost White (#F9F9F9)
+Lilac Purple (#D1C4E9)
+Bubblegum Pink (#F8BBD0)
+Mint Green (#C0F7E6)
+Baby Blue (#B3E5FC)*/
+
 /* BELOW THIS POINT IS MEDIA QUERY */
 /* so you wanna change the width of your page? 
    by default, the container width is 900px.
@@ -53,8 +60,7 @@ aside {
 }
     
 :root {
-    --body-bg-image: url("assets/wallpaper/pink1.tilever.png");
-    /* --header-image: url("assets/wallpaper/pink1.png"); */
+    --body-bg-image: url("assets/wallpaper/pink1.vert.webp");
 /* Colors */
     --content: #43256E;
     --list-style-image: url("assets/pixels/batwingL.gif");
@@ -133,17 +139,63 @@ body {
     cursor: url("assets/cursors/batwingR.cur") 0 16, auto;
 }
 
-* {
-    box-sizing: border-box;
+hr {
+    color: #B3E5FC;
+    border: 1px solid #B9F6CA;
+}
+
+/*Code from https://puretoxin.neocities.org/resources/codesnippets/sparklecursor/*/
+
+.cursor-glitter {
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  z-index: 10001;
+
+  pointer-events: none;
+  user-select: none;
+
+  font-size: 13px;
+  line-height: 1;
+
+  text-shadow:
+    0 0 3px currentColor,
+    0 0 7px currentColor;
+
+  transform: translate(-50%, -50%);
+
+  animation: glitter-fall 700ms ease-out forwards;
+}
+
+@keyframes glitter-fall {
+  0% {
+    opacity: 1;
+
+    transform:
+      translate(-50%, -50%)
+      translate(0, 0)
+      rotate(0deg)
+      scale(1);
+  }
+
+  100% {
+    opacity: 0;
+
+    transform:
+      translate(-50%, -50%)
+      translate(var(--glitter-x), var(--glitter-y))
+      rotate(var(--glitter-rotation))
+      scale(0.2);
+  }
 }
 
 /* CSS for extras */
-.topBar {
+.topBar, footer {
     background-image: url("assets/wallpaper/blackgraystripe.webp");
     width: 100%;
     height: 30px;
     padding: 10px;
-    font-size: smaller;
 }
 
 .header {
@@ -154,17 +206,18 @@ body {
 /* This is only for a background image! */
 /* If you want to put assets IN the header, 
    you can add them directly to the <div id="header"></div> element! */
-    background-image: url("assets/wallpaper/");
+    background-image: url("assets/wallpaper/pastelgalaxy.webp");
     background-size: 100%;
 }
 
 /* Overarching container for the marquees */
-.stampmarquee, .blinkiemarquee {
-    background-image: url("assets/wallpaper/");
+.marqueeContainer {
+    background-image: url("assets/wallpaper/pastelgalaxy.webp");
+    vertical-align: baseline;
 }
 
 /* Stamp Marquee */
-.stampmarquee {
+.stampMarquee {
     display: flex ;
     overflow: hidden ;
     white-space: nowrap ;
@@ -176,7 +229,7 @@ body {
     animation-iteration-count: infinite;
     animation-name: stampsHori;
     animation-timing-function: linear;
-    padding: 3px 3px 3px 3px;
+    padding: 2px;
 }
 
 @keyframes stampsHori {
@@ -189,7 +242,7 @@ body {
 }
 
 /* Blinkie Marquee */
-.blinkiemarquee {
+.blinkieMarquee {
     display: flex ;
     overflow: hidden ;
     white-space: nowrap ;
@@ -201,7 +254,7 @@ body {
     animation-iteration-count: infinite;
     animation-name: blinkiesHori;
     animation-timing-function: linear;
-    padding: 3px 3px 3px 3px;
+    padding: 2px;
 }
 
 @keyframes blinkiesHori {
@@ -303,8 +356,6 @@ ul {
     background-image: url("assets/wallpaper/purplepaddingbg.jpg");
     width: 200px;
     padding: 20px;
-    font-size: smaller;
-/* this makes the sidebar text slightly smaller */
 }
 
 .toDoList {
@@ -322,7 +373,7 @@ ul {
     order: 2;
 }
 
-#warning, .logtemplate {
+#warning, .logTemplate {
     margin-top: -2%;
     text-align: center;
 }
@@ -332,12 +383,12 @@ ul {
     justify-content: center;
 } */
 
-.sitelog {
+.siteLog {
     background-image: url("assets/wallpaper/purplepaddingbg.jpg");
     height: 200px;
     width: 100%;
     border: 1px solid #43256E;
-    padding: 10px;
+    padding: 5px;
     overflow-y: auto;
 }
 
@@ -351,8 +402,6 @@ ul {
 }
 
 footer {
-    background-image: url("assets/wallpaper/purplepaddingbg.jpg");
-/* background color for footer */
     width: 100%;
     height: 40px;
     padding: 10px;
@@ -367,4 +416,13 @@ footer {
     background-image: url("assets/wallpaper/purplepaddingbg.jpg");
     width: 200px;
     padding: 20px;
+}
+
+.journal {
+    background-image: url("assets/wallpaper/purplepaddingbg.jpg");
+    height: 300px;
+    width: 100%;
+    border: 1px solid #43256E;
+    padding: 5px;
+    overflow-y: auto;
 }
